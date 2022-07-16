@@ -1,0 +1,68 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+:root{
+  --cyan:hsl(193, 38%, 86%);
+  --neon-green:hsl(150, 100%, 66%);
+  --grayish-blue:hsl(217, 19%, 38%);
+  --dark-grayish-blue:hsl(217, 19%, 24%);
+  --dark-blue:hsl(218, 23%, 16%);
+}
+body{
+  font-family: 'Manrope', sans-serif;
+}
+#advice-app{
+  background-color: var(--dark-blue);
+  min-height:100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  width:550px;
+  height:400px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabs{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--dark-grayish-blue);
+  height:50px;
+  width:300px;
+  border-radius: 25px;
+  margin-bottom: 1.5rem;
+}
+.tab-links{
+  background-color: transparent;
+  outline: none;
+  border: solid 2px transparent;
+  padding:8px 12px;
+  color: var(--cyan);
+  cursor: pointer;
+
+}
+
+.tab-links:hover{
+  background-color:var(--cyan);
+  color:var(--dark-blue);
+  font-weight: 600;
+  border-radius: 20px;
+  padding:8px 12px;
+}
+
+.tab-links.active{
+  background-color: cyan;
+  color:var(--dark-blue);
+  font-weight: 600;
+  border-radius: 20px;
+  padding:8px 12px;
+}
