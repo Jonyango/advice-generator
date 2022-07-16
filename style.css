@@ -66,3 +66,14 @@ body{
   border-radius: 20px;
   padding:8px 12px;
 }
+
+#advice{
+  background-color: var(--dark-grayish-blue);
+  color: var(--cyan);
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 28px;
+}
