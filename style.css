@@ -98,7 +98,7 @@ body{
 }
 
 .attribution a{
-  color:var(--neon-green)
+  color:var(--neon-green);
 }
 .dice-icon{
   background-color: var(--neon-green);
