@@ -1,12 +1,12 @@
 class UI{
   constructor(){
-    // this.id=document.getElementById('advice-id')
-    this.advice= document.getElementById('advice');
+    this.titleId=document.getElementById('advice-title')
+    this.advice= document.getElementById('advice-text');
   }
 
   displayContent(results){
     const{id,advice}=results.slip;
-    // this.id.textContent=`Advice #${id}`
+    this.titleId.textContent=`ADVICE  #${id}`
     this.advice.textContent=`"${advice}"`;
   }
 }

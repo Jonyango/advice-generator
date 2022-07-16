@@ -25,7 +25,7 @@ body{
 
 .container{
   width:550px;
-  height:400px;
+  height:500px;
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -36,8 +36,8 @@ body{
   align-items: center;
   justify-content: space-around;
   background-color: var(--dark-grayish-blue);
-  height:50px;
-  width:300px;
+  height:60px;
+  width:400px;
   border-radius: 25px;
   margin-bottom: 1.5rem;
 }
@@ -48,6 +48,8 @@ body{
   padding:8px 12px;
   color: var(--cyan);
   cursor: pointer;
+  width:120px;
+  height:40px;
 
 }
 
@@ -57,23 +59,54 @@ body{
   font-weight: 600;
   border-radius: 20px;
   padding:8px 12px;
+  width:120px;
+  height:40px;
 }
 
 .tab-links.active{
-  background-color: cyan;
+  background-color: var(--neon-green);
   color:var(--dark-blue);
   font-weight: 600;
   border-radius: 20px;
   padding:8px 12px;
+  width:120px;
+  height:40px;
 }
 
-#advice{
+#advice,.advice{
   background-color: var(--dark-grayish-blue);
   color: var(--cyan);
-  width: 400px;
-  height: 200px;
+  width: 550px;
+  height: 300px;
   border-radius: 10px;
   padding: 1rem;
-  text-align: center;
   font-size: 28px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#advice-title{
+  font-size: 20px;
+  color:var(--neon-green);
+}
+
+.attribution{
+  color: var(--cyan);
+  font-size: 14px;
+}
+
+.attribution a{
+  color:var(--neon-green)
+}
+.dice-icon{
+  background-color: var(--neon-green);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-top: -2rem;
 }
