@@ -14,10 +14,17 @@ const shared = document.getElementById('shared')
 
 //fetch the advice when the DOM content is loaded
 document.addEventListener('DOMContentLoaded',function(){
+  // hide the content of the other tabs when page content loads;
   bookContainer.style.display='none';
   shared.style.display='none';
+
+  // fetch the random advice
  getRandomAdvice();
+
+ //fetch bookmarked quotes if there is any
  getBookMarked();
+
+ //fetch shared quotes.
 
 });
 
@@ -38,8 +45,12 @@ tabContainer.addEventListener('click',function(e){
     })
 
     //show current tab and the add the active class to the current tab
-    document.getElementById(e.target.textContent).style.display="flex";
-    console.log(e.target.textContent)
+    if(e.target.textContent === 'advice'){
+      document.getElementById(e.target.textContent).style.display="flex";
+    }else{
+      document.getElementById(e.target.textContent).style.display="grid";
+    }
+    
     e.target.className += " active";
   }
 
@@ -59,6 +70,7 @@ bookMarkBtn.addEventListener('click',function(){
   
 
 });
+
 
 function getBookMarked(){
   const bookmarks=Store.getBookMarkedQuotes();
