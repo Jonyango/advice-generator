@@ -1,6 +1,6 @@
-class Storage{
+class Store{
  
-  static getBookMarkedQuoted(){
+  static getBookMarkedQuotes(){
     let bookmarks;
     if(localStorage.getItem('bookMarked') === null){
       bookmarks = [];

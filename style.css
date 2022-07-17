@@ -87,7 +87,7 @@ body{
   justify-content: space-evenly;
 }
 
-#advice-title{
+.advice-title{
   font-size: 20px;
   color:var(--neon-green);
 }
@@ -124,4 +124,11 @@ ion-icon {
 .icons{
   display: flex;
   justify-content: end;
+}
+
+#bookmarked{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
 }
