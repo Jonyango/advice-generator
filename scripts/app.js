@@ -4,6 +4,11 @@ const ui = new UI();
 const tabContainer=document.querySelector('.tabs');
 const tabs =document.querySelectorAll('.tab-links');
 const contents = document.querySelectorAll('.tabs-content');
+const bookMarkBtn = document.getElementById('bookmark');
+const share =document.getElementById('share');
+const titleId=document.getElementById('advice-title');
+const adviceText= document.getElementById('advice-text');
+
 
 //fetch the advice when the DOM content is loaded
 document.addEventListener('DOMContentLoaded',function(){
@@ -35,3 +40,11 @@ tabContainer.addEventListener('click',function(e){
   }
 
 })
+
+//add the current quote to storage when book mark icon is clickked
+bookMarkBtn.addEventListener('click',function(){
+
+  Storage.setBookMarkedQuotes(adviceText.textContent, titleId.textContent);
+
+  console.log('I was clicked');
+});
