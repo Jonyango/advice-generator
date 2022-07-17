@@ -138,3 +138,11 @@ ion-icon {
   gap: 20px;
 
 }
+
+.marked-container{
+  width: 400px;
+  font-size: 24px;
+}
+.img-divider{
+  width: 350px;
+}

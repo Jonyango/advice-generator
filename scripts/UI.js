@@ -27,7 +27,7 @@ class UI{
           <h4 id="book-id"   class="advice-title" >${bookmark.id}</h4>
           <p  id="book-text" class="advice-text" >${bookmark.text}</p>
           <div class="dividers">
-            <img src="images/pattern-divider-desktop.svg" alt="pattern-divider-desktop">
+            <img src="images/pattern-divider-desktop.svg" alt="pattern-divider-desktop" class='img-divider'>
           </div>`
 
           overallContainer.appendChild(div);
