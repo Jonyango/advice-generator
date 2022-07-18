@@ -11,12 +11,11 @@
   --dark-grayish-blue:hsl(217, 19%, 24%);
   --dark-blue:hsl(218, 23%, 16%);
 }
-html { 
-  overflow-y: scroll; 
-  overflow-x:hidden; }
+
 
 body{
   font-family: 'Manrope', sans-serif;
+  background-color: var(--dark-blue);
 }
 
 
@@ -136,6 +135,7 @@ ion-icon {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  overflow-y:scroll;
 
 }
 
@@ -145,4 +145,44 @@ ion-icon {
 }
 .img-divider{
   width: 350px;
+}
+
+@media(max-width:500px){
+  .container{
+    width: 300px;
+    height: 250px;
+  }
+  .attribution{
+    display: block;
+  }
+  #advice,.advice,.marked-container{
+    width: 300px;
+    height: 250px;
+    font-size: 22px;
+
+
+  }
+  .tabs{
+    width: 300px;
+  }
+
+  .dividers img{
+    width: 250px;
+  }
+
+  .advice-title{
+    font-size: 16px;
+  }
+  .dice-icon{
+    margin-top: -.5rem;
+    /* width: 40px;
+    height: 40px; */
+  }
+  .dice-icon img{
+    width: 10px;
+    height: 10px;
+  }
+  #bookmarked{
+    display: block;
+  }
 }
