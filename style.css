@@ -92,6 +92,17 @@ body{
   justify-content: space-evenly;
 }
 
+.empty-container{
+  font-size: 28px;
+  color: var(--cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  
+}
+
 .advice-title{
   font-size: 20px;
   color:var(--neon-green);
@@ -135,7 +146,6 @@ ion-icon {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  overflow-y:scroll;
 
 }
 

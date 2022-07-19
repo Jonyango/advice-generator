@@ -10,14 +10,19 @@ const titleId=document.querySelector('.advice-title');
 const adviceText= document.querySelector('.advice-text');
 const bookContainer =document.getElementById('bookmarked');
 const shared = document.getElementById('shared');
+const diceBtn = document.querySelector('.dice-icon');
+const empty = document.querySelector('#empty');
+
 
 
 
 //fetch the advice when the DOM content is loaded
 document.addEventListener('DOMContentLoaded',function(){
+
   // hide the content of the other tabs when page content loads;
   bookContainer.style.display='none';
   shared.style.display='none';
+ 
 
   // fetch the random advice
  getRandomAdvice();
@@ -29,7 +34,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 });
 
-
+//display and hide content accordingly;
 
 tabContainer.addEventListener('click',function(e){
   
@@ -53,6 +58,16 @@ tabContainer.addEventListener('click',function(e){
     }
     
     e.target.className += " active";
+
+    if(e.target.textContent === 'bookmarked'){
+      getBookMarked();
+      empty.style.display='flex';
+      diceBtn.style.display='none';
+
+    }else{
+      empty.style.display='none';
+      diceBtn.style.display='flex';
+    }
   }
 
 })
@@ -63,14 +78,33 @@ bookMarkBtn.addEventListener('click',function(){
     Store.setBookMarkedQuotes(adviceText.textContent, titleId.textContent);
     bookMarkBtn.setAttribute('name','bookmark');
     bookMarkBtn.style.color='hsl(150, 100%, 66%)';
+    
 
   }else{
     alert('It has alredy been added to bookmark');
-  }
-
-  
+  }  
 
 });
+
+//get random advice on when the button is clicked
+diceBtn.addEventListener('click',function(){
+  if(bookMarkBtn.getAttribute('name') === 'bookmark'){
+    bookMarkBtn.setAttribute('name','bookmark-outline');
+    bookMarkBtn.style.color='hsl(193, 38%, 86%)';
+  }
+  getRandomAdvice();
+});
+
+//delete a bookmark.
+bookContainer.addEventListener('click',function(e){
+  if(e.target.className ==='delete md hydrated'){
+    ui.removeBookMarked(e.target);
+    let elementId =e.target.parentElement.parentElement.firstElementChild.textContent;
+    Store.removeBookmarkedQuotes(elementId);
+  }
+
+});
+
 
 
 function getBookMarked(){
@@ -84,11 +118,3 @@ function getRandomAdvice(){
   .catch(e=>console.log(e));
 }
 
-bookContainer.addEventListener('click',function(e){
-  if(e.target.className ==='delete md hydrated'){
-    ui.removeBookMarked(e.target);
-    let elementId =e.target.parentElement.parentElement.firstElementChild.textContent;
-    Store.removeBookmarkedQuotes(elementId);
-  }
-
-});

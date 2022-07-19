@@ -13,16 +13,17 @@ class UI{
   }
 
   displayBookMarked(bookmarks){
-    let that =this;
     if (bookmarks.length === 0){  
-      const overallContainer = document.getElementById('bookmarked')
-      const div = document.createElement('div');
-      div.className='marked-container';
-      div.textContent=`You haven't BookMarked any quotes yet! `;
-      div.style.background= 'transparent';
-      overallContainer.appendChild(div);
+      const overallContainer = document.querySelector('#empty');
+      overallContainer.className='empty-container';
+      
+      
 
-    }
+     
+
+    }else{
+
+    
     bookmarks.forEach(function(bookmark){
     const overallContainer = document.getElementById('bookmarked')
       const div = document.createElement('div');
@@ -43,7 +44,7 @@ class UI{
             
     })
 
-  }
+  }}
 
   removeBookMarked(target){
     if(target.className === 'delete md hydrated'){
