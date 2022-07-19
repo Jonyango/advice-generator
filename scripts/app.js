@@ -9,7 +9,8 @@ const share =document.getElementById('share');
 const titleId=document.querySelector('.advice-title');
 const adviceText= document.querySelector('.advice-text');
 const bookContainer =document.getElementById('bookmarked');
-const shared = document.getElementById('shared')
+const shared = document.getElementById('shared');
+
 
 
 //fetch the advice when the DOM content is loaded
@@ -82,3 +83,12 @@ function getRandomAdvice(){
   .then(results=>{ui.displayContent(results)})
   .catch(e=>console.log(e));
 }
+
+bookContainer.addEventListener('click',function(e){
+  if(e.target.className ==='delete md hydrated'){
+    ui.removeBookMarked(e.target);
+    let elementId =e.target.parentElement.parentElement.firstElementChild.textContent;
+    Store.removeBookmarkedQuotes(elementId);
+  }
+
+});

@@ -51,4 +51,18 @@ class Store{
     localStorage.setItem('shared', JSON.stringify(sharedQuotes));
 
   }
+
+  static removeBookmarkedQuotes(target){
+    const bookmarks = Store.getBookMarkedQuotes();
+    console.log(bookmarks);
+
+    bookmarks.forEach(function(bookmark, index){
+      if(bookmark.id === target){
+        console.log('true')
+        bookmarks.splice(index,1);
+      }
+    });
+    localStorage.setItem('bookMarked',JSON.stringify(bookmarks));
+
+  }
 }
