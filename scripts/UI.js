@@ -16,14 +16,9 @@ class UI{
     if (bookmarks.length === 0){  
       const overallContainer = document.querySelector('#empty');
       overallContainer.className='empty-container';
-      
-      
-
-     
-
+                
     }else{
-
-    
+   
     bookmarks.forEach(function(bookmark){
     const overallContainer = document.getElementById('bookmarked')
       const div = document.createElement('div');
@@ -51,4 +46,5 @@ class UI{
       target.parentElement.parentElement.remove();
     }
   }
+
 }

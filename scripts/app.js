@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded',function(){
  getRandomAdvice();
 
  //fetch bookmarked quotes if there is any
- getBookMarked();
+//  getBookMarked();
 
  //fetch shared quotes.
 
@@ -61,8 +61,10 @@ tabContainer.addEventListener('click',function(e){
 
     if(e.target.textContent === 'bookmarked'){
       getBookMarked();
-      empty.style.display='flex';
-      diceBtn.style.display='none';
+        empty.firstElementChild.style.display='flex';
+        diceBtn.style.display='none';
+      
+      
 
     }else{
       empty.style.display='none';

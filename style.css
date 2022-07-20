@@ -157,6 +157,10 @@ ion-icon {
   width: 350px;
 }
 
+#empty p{
+  display: none;
+}
+
 @media(max-width:500px){
   .container{
     width: 300px;
